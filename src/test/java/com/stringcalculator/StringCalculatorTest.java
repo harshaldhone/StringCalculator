@@ -8,8 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringCalculatorTest {
 
     @Test
-    @DisplayName("This is Trial Test")
-    public void TrialTest(){
-
+    public void shouldReturnZeroOnEmptyString(){
+        assertEquals(0,StringCalculator.Add(""));
     }
 }
