@@ -1,2 +1,7 @@
-package com.stringcalculator;public class StringCalculator {
+package com.stringcalculator;
+
+public class StringCalculator {
+    public static void main(String[] args) {
+        System.out.println("Hello World...!");
+    }
 }
