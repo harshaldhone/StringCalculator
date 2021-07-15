@@ -5,7 +5,7 @@ import java.util.List;
 public class StringCalculator {
     public static void main(String[] args) {
         try{
-            System.out.println(Add("0"));
+            System.out.println(Add("a,b"));
         }catch (Exception e){
             System.out.println("Exception"+e);
         }
@@ -19,7 +19,13 @@ public class StringCalculator {
         else if(s.contains(",")){
             String[] tokens = s.split(",");
             for(String strTmp:tokens){
-                sum=sum+toInt(strTmp);
+                if(strTmp.contains("\n")){
+                    String[] subTokens = strTmp.split("\n"); //Tokens of Token
+                    for( String Tmp:subTokens){
+                        sum=sum+toInt(Tmp);
+                    }
+                }
+                else sum=sum+toInt(strTmp);
             }
             return sum;
         }

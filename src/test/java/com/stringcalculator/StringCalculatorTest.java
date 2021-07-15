@@ -1,11 +1,9 @@
 package com.stringcalculator;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
+
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,21 +17,26 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Number Return Test")
-    public void shouldReturnNumonNum(){
+    public void shouldReturnNumOnNum(){
         assertEquals(1,StringCalculator.Add("1"));
     }
 
     @Test
-    @DisplayName("Addition Return Test")
+    @DisplayName("Addition of tow number Return Test")
     public void shouldReturnSumOfTwoNumbers(){
         assertEquals(5,StringCalculator.Add("3,2"));
     }
 
     @Test
-    @DisplayName("Addition Return Test")
+    @DisplayName("Addition of numbers Return Test")
     public void shouldReturnSumOfNumbers(){
-        assertEquals(15,StringCalculator.Add("3,2,10"));
+        assertEquals(20,StringCalculator.Add("3,2,10,5"));
     }
 
+    @Test
+    @DisplayName("Presence of Newline")
+    public void checkForNewLineInInput(){
+        assertEquals(10,StringCalculator.Add("3\n2,5,\n"));
+    }
 
 }
