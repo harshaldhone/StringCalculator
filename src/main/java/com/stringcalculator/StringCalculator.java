@@ -21,7 +21,7 @@ public class StringCalculator {
             for(String strTmp:tokens){
                 sum=sum+toInt(strTmp);
             }
-            return toInt(tokens[0])+toInt(tokens[1]);
+            return sum;
         }
         else {
             return toInt(s);
