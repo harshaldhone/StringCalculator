@@ -39,4 +39,11 @@ class StringCalculatorTest {
         assertEquals(10,StringCalculator.Add("3\n2,5,\n"));
     }
 
+    @Test
+    @DisplayName("Presence of Delimiters")
+    public void checkForDelimiters(){
+        assertEquals(10,StringCalculator.Add("//;3\n2;5"));
+    }
+
+
 }
