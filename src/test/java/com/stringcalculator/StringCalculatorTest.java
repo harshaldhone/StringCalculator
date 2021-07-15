@@ -39,7 +39,6 @@ class StringCalculatorTest {
         assertEquals(10,StringCalculator.Add("3\n2,5,\n"));
     }
 
-<<<<<<< HEAD
     @Test
     @DisplayName("Presence of Delimiters")
     public void checkForDelimiters(){
@@ -49,6 +48,4 @@ class StringCalculatorTest {
 
 
 
-=======
->>>>>>> parent of 56e96c0... Test for Delimeters and Modify Add method, add function addExp
 }
