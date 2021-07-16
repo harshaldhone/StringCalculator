@@ -37,10 +37,13 @@ public class StringCalculator {
                     sum= sum+Num;
                 }
             }
-            else sum= sum+Num;
+            else{
+                Num=toInt(strTmp);
+                sum= sum+Num;
+            }
         }
 
-            return sum;
+        return sum;
     }
 
     private static int toInt(String numText) throws NumberFormatException{
